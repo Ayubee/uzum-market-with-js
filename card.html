@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <!-- Font awesome -->
+    <link rel="stylesheet" href="./src/output.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -13,16 +11,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Styles -->
-    <link rel="stylesheet" href="./src/output.css" />
-    <link rel="stylesheet" href="./src/loader.css" />
+    <title>Product</title>
   </head>
   <body>
-    <!-- Loader -->
-    <div class="loader__wrapper none">
-      <span class="loader"></span>
-    </div>
-    <!-- Header -->
     <header class="bg-base-200 mb-5">
       <div class="navbar main-container">
         <div class="navbar-start">
@@ -45,41 +36,9 @@
         </div>
       </div>
     </header>
-
-    <main class="pb-10">
-      <div class="hero__container container p-10">
-        <div class="card-side bg-base-100 mx-auto flex w-200 gap-3 shadow-sm">
-          <figure>
-            <img class="card-img w-100" src="" alt="image of product" />
-          </figure>
-          <div class="card-body">
-            <h2 class="card-title">New movie is released!</h2>
-            <p class="text w-100">Click the button to watch on Jetflix app.</p>
-            <p class="flex items-center gap-1">
-              <i class="fa-solid fa-star text-orange-300"></i>
-              <span class="rating">4.7</span>
-              <span class="review">(10 Review)</span>
-            </p>
-
-            <div class="flex flex-col gap-2">
-              <del class="priceOfProduct price badge badge-soft badge-secondary"
-                >$1999</del
-              >
-              <h3
-                class="discountPrice price-with-discount badge badge-primary font-bold"
-              >
-                $1555
-              </h3>
-            </div>
-
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Korzinkaga qoshish</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <main class="main">
+      <h1>Product</h1>
     </main>
-
     <footer class="bg-base-300 text-base-content p-4">
       <div class="main-container footer sm:footer-horizontal items-center">
         <aside class="grid-flow-col items-center">

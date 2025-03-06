@@ -12,3 +12,5 @@ modeToggler.addEventListener("click", () => {
   html.dataset.theme = html.dataset.theme == "light" ? "dracula" : "light";
   localStorage.setItem("theme", html.dataset.theme);
 });
+
+export { modeToggler };
