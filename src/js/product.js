@@ -9,6 +9,13 @@ const Preview = document.querySelector(".review");
 const img = document.querySelector(".card-img");
 const priceOfProduct = document.querySelector(".priceOfProduct");
 const discountPrice = document.querySelector(".discountPrice");
+const addBtn = document.querySelector("#btn__add");
+const sup = document.querySelector("sup");
+let counter = 0;
+addBtn.addEventListener("click", () => {
+  counter++;
+  sup.textContent = counter;
+});
 
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get("id");
