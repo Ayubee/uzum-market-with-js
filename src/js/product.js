@@ -1,6 +1,8 @@
 import { fetchData } from "./fetchData.js";
 import "./dark-mode.js";
 import "./loader.js";
+import { showProducts } from "./updateProduct.js";
+showProducts();
 const card = document.querySelector(".card");
 const cardTitle = document.querySelector(".card-title");
 const cardText = document.querySelector(".text");
@@ -10,16 +12,13 @@ const img = document.querySelector(".card-img");
 const priceOfProduct = document.querySelector(".priceOfProduct");
 const discountPrice = document.querySelector(".discountPrice");
 const addBtn = document.querySelector("#btn__add");
-const sup = document.querySelector("sup");
-let counter = 0;
-addBtn.addEventListener("click", () => {
-  counter++;
-  sup.textContent = counter;
-});
-
+const textComment = document.querySelector("#comment");
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get("id");
+const commetnCard = document.querySelector(".comment__card");
+const cardName = document.querySelector(".car-title");
 const url = "https://dummyjson.com/product/" + id;
+const commetnData = document.querySelector("#coment__data");
 
 const showProduct = (product) => {
   const {
@@ -30,8 +29,9 @@ const showProduct = (product) => {
     discountPercentage,
     rating,
     reviews,
+    comment,
   } = product;
-
+  console.log();
   img.src = thumbnail;
   cardTitle.textContent = title;
   cardText.textContent = description;
@@ -39,6 +39,21 @@ const showProduct = (product) => {
   priceOfProduct.textContent = `${price}$`;
   discountPrice.textContent = `${(price - (price / 100) * discountPercentage).toFixed(2)}`;
   Preview.textContent = `${reviews.length} Reviews`;
+  textComment.textContent = `${reviews[0].comment}`;
+  cardName.textContent = `${reviews[0].reviewerName}`;
+  commetnData.textContent = `${reviews[0].date}`;
+
+  // reviews.forEach((com) => {
+  //   console.log(com.comment);
+  //   textComment.textContent = com.comment;
+  //   cardName.textContent = `${com.reviewerName}`;
+  //   commetnData.textContent = `${com.date}`;
+  // });
+
+  // for (let i = 0; i < reviews.length; i++) {
+  //   textComment.textContent = reviews[0].comment;
+  // }
+  // card.appendChild(commetnCard);
 };
 
 fetchData("https://dummyjson.com/product/" + id)

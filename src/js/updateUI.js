@@ -1,3 +1,5 @@
+import { addProduct } from "./updateProduct.js";
+
 const template = document.querySelector("template");
 const cardList = document.getElementById("card-list");
 
@@ -23,7 +25,12 @@ const showCards = ({ products }) => {
     const reviewText = clone.querySelector(".review");
     const priceText = clone.querySelector(".price");
     const priceWithDiscount = clone.querySelector(".price-with-discount");
-    const buyBtn = document.querySelector(".buy-btn");
+    const buyBtn = clone.querySelector(".buy-btn");
+
+    buyBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      addProduct(product);
+    });
 
     a.href = `./product.html?id=${id}`;
     img.src = thumbnail;
