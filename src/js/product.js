@@ -42,18 +42,6 @@ const showProduct = (product) => {
   textComment.textContent = `${reviews[0].comment}`;
   cardName.textContent = `${reviews[0].reviewerName}`;
   commetnData.textContent = `${reviews[0].date}`;
-
-  // reviews.forEach((com) => {
-  //   console.log(com.comment);
-  //   textComment.textContent = com.comment;
-  //   cardName.textContent = `${com.reviewerName}`;
-  //   commetnData.textContent = `${com.date}`;
-  // });
-
-  // for (let i = 0; i < reviews.length; i++) {
-  //   textComment.textContent = reviews[0].comment;
-  // }
-  // card.appendChild(commetnCard);
 };
 
 fetchData("https://dummyjson.com/product/" + id)

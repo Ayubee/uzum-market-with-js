@@ -43,7 +43,7 @@ const showCards = ({ products }) => {
     priceText.textContent = `$${price}`;
     priceWithDiscount.textContent = `$${(price - (price / 100) * discountPercentage).toFixed(2)}`;
 
-    reviewText.textContent = `${reviews.length} Reviews`;
+    reviewText.textContent = `$${reviews.length} Reviews`;
 
     cardList.appendChild(clone);
   });
