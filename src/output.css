@@ -626,6 +626,9 @@
       height: calc(0.25rem * 8);
     }
   }
+  .static {
+    position: static;
+  }
   .list-col-wrap {
     grid-row-start: 2;
   }
